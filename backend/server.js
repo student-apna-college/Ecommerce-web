@@ -1,11 +1,11 @@
 import express  from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
-import connectDB from "./Backend/config/db.js";
-import authRoutes from './Backend/router/authRouter.js';
+import connectDB from "./config/db.js";
+import authRoutes from './router/authRouter.js';
 
-import categoryRoute from './Backend/router/categoryRoute.js';
-import productRoute from './Backend/router/productRoute.js'
+import categoryRoute from './router/categoryRoute.js';
+import productRoute from './router/productRoute.js'
 import cors from 'cors'
 
 //config env file
