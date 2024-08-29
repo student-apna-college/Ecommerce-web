@@ -15,7 +15,7 @@ import { useAuth } from '../../context/auth'
       e.preventDefault();
       //NICHE WALA CODE CLIENT SAY SERVER PAR BHEJNE KE LIYE HAI USER RAGISTER KARNE KE LIYE LINE NO 19 SAY 26 TAK
       try{
-          const res= await axios.post('/api/v1/auth/login',{email,password});
+          const res= await axios.post('https://ecommerce-web-86gg.onrender.com/api/v1/auth/login',{email,password});
           if(res.data.success){
             toast.success(res.data.message)
             setAuth({

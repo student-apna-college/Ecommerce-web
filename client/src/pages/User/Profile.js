@@ -30,7 +30,7 @@ import axios from 'axios'
         e.preventDefault();
         //NICHE WALA CODE CLIENT SAY SERVER PAR BHEJNE KE LIYE HAI USER RAGISTER KARNE KE LIYE LINE NO 19 SAY 26 TAK
         try{
-            const {data}= await axios.put('/api/v1/auth/profile',{name,email,password,phone,address});
+            const {data}= await axios.put('https://ecommerce-web-86gg.onrender.com/api/v1/auth/profile',{name,email,password,phone,address});
             if(data?.error){
               toast.error(data?.error)
             }else{

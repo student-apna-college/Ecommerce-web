@@ -16,7 +16,7 @@ export default function AdminOrders() {
 
     const getOrders= async() =>{
         try{
-                const {data} = await axios.get('/api/v1/admin/orders')
+                const {data} = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/admin/orders')
                 setOrders(data)
         }catch(error){
             console.log(error)
@@ -29,7 +29,7 @@ export default function AdminOrders() {
 
     const handleChange = async(orderId, value) => {
         try{
-                const  { data } = await axios.put(`/api/v1/auth/order-status/${orderId}`, {status:value})                
+                const  { data } = await axios.put(`https://ecommerce-web-86gg.onrender.com/api/v1/auth/order-status/${orderId}`, {status:value})                
                 getOrders();
         }catch(error){
             console.log(error)

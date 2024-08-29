@@ -52,7 +52,7 @@ import toast from 'react-hot-toast';
   //get payment getway token
   const getToken = async()=> {
     try{
-            const {data} = await axios.get('/api/v1/product/braintree/token')
+            const {data} = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/product/braintree/token')
             setClientToken(data?.clientToken)
     }catch(error){
         console.log(error)
@@ -67,7 +67,7 @@ import toast from 'react-hot-toast';
   const handlePayment = async ()=>{
     try{
         const {nonce} = await instance.requestPaymentMethod()
-        const {data} =  await axios.post('/api/v1/product/braintree/payment',{
+        const {data} =  await axios.post('https://ecommerce-web-86gg.onrender.com/api/v1/product/braintree/payment',{
             nonce,cart
         })
         setLoading(false)

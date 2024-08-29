@@ -20,7 +20,7 @@ function HomePage () {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get('/api/v1/category/get-category');
+      const { data } = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/category/get-category');
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -53,7 +53,7 @@ function HomePage () {
 
   const getAllProduct = async () => {
     try {
-      const { data } = await axios.get('/api/v1/product/get-product', {
+      const { data } = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/product/get-product', {
         params: { page: currentPage, limit: pageSize }
       });
       setProduct(data.products);
@@ -65,7 +65,7 @@ function HomePage () {
 
   const filterProduct = async () => {
     try {
-      const { data } = await axios.post('/api/v1/product/product-filter', { checked, radio, page: currentPage, limit: pageSize });
+      const { data } = await axios.post('https://ecommerce-web-86gg.onrender.com/api/v1/product/product-filter', { checked, radio, page: currentPage, limit: pageSize });
       setProduct(data?.product);
       setTotal(data?.total);
     } catch (error) {
@@ -75,7 +75,7 @@ function HomePage () {
 
   const getTotal = async () => {
     try {
-      const { data } = await axios.get('/api/v1/product/product-count');
+      const { data } = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/product/product-count');
       setTotal(data?.total);
     } catch (error) {
       console.log(error);

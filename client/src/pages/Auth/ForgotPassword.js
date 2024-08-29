@@ -17,7 +17,7 @@ import { useNavigate } from 'react-router-dom'
       e.preventDefault();
       //NICHE WALA CODE CLIENT SAY SERVER PAR BHEJNE KE LIYE HAI USER RAGISTER KARNE KE LIYE LINE NO 19 SAY 26 TAK
       try{
-          const res= await axios.post("/api/v1/auth/forgot-password",{email,newPassword,question});
+          const res= await axios.post("https://ecommerce-web-86gg.onrender.com/api/v1/auth/forgot-password",{email,newPassword,question});
           if(res.data.success){
             toast.success(res.data.message);           
             navigate('/login');

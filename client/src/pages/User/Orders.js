@@ -11,7 +11,7 @@ import moment from "moment"
 
     const getOrders= async() =>{
         try{
-                const {data} = await axios.get('/api/v1/auth/all-orders')
+                const {data} = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/auth/all-orders')
                 setOrders(data)
         }catch(error){
             console.log(error)

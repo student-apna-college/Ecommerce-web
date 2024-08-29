@@ -12,7 +12,7 @@ import Spinner from './Spinner';
 
     useEffect (()=> {
         const authCheck = async() => {
-            const res = await axios.get('/api/v1/auth/admin-auth',)
+            const res = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/auth/admin-auth',)
              console.log(res?.data)
              if(res.data.ok){
                 setOk(true)

@@ -10,7 +10,7 @@ import { useSearch } from '../../context/search';
     const handleOnSubmit = async (e)=>{
         e.preventDefault()
         try{
-            const {data} = await axios.get(`/api/v1/product/search/${value.keyword}`)
+            const {data} = await axios.get(`https://ecommerce-web-86gg.onrender.com/api/v1/product/search/${value.keyword}`)
             setValue({...value, result:data});
             navigate('/search');
         }catch(error){

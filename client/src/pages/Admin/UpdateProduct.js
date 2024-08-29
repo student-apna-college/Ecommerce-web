@@ -27,7 +27,7 @@ const {Option} = Select
 
 const getSingleProduct = async () => {
         try{
-            const {data} = await axios.get(`/api/v1/product/get-product/${params.slug}`)
+            const {data} = await axios.get(`https://ecommerce-web-86gg.onrender.com/api/v1/product/get-product/${params.slug}`)
             setId(data.product._id)
             setName(data.product.name)
             setDescription(data.product.description)
@@ -49,7 +49,7 @@ getSingleProduct()
 
     const getAllCategory = async () => {
         try{
-                const {data} = await axios.get('/api/v1/category/get-category')
+                const {data} = await axios.get('https://ecommerce-web-86gg.onrender.com/api/v1/category/get-category')
                 if(data?.success){
                     setCategories(data?.category);
                 }
@@ -78,7 +78,7 @@ const handleUpdate = async (e) =>{
         photo && productData.append("photo",photo)
         productData.append("category",category)
 
-            const {data} = axios.put(`/api/v1/product/update-product/${id}`,productData)
+            const {data} = axios.put(`https://ecommerce-web-86gg.onrender.com/api/v1/product/update-product/${id}`,productData)
             if(data?.success){
                 toast.error(data?.message)
             }else{
@@ -97,7 +97,7 @@ const handleDelete = async()=>{
     try{
             let answer = window.prompt('Are you sure want to delete ')
             if(!answer) return;
-            const {data} = await axios.delete(`/api/v1/product/delete-product/${id}`);
+            const {data} = await axios.delete(`https://ecommerce-web-86gg.onrender.com/api/v1/product/delete-product/${id}`);
             toast.success("Delete product successfully ")
             navigate('/dashboard/admin/product')
     }catch(error){

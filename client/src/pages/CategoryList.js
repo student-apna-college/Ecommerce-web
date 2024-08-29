@@ -16,7 +16,7 @@ import axios from 'axios'
     },[params?.slug])
     const getProductByCat = async () => {
         try{
-                const {data} = await axios.get(`/api/v1/product/product-category/${params.slug}`)
+                const {data} = await axios.get(`https://ecommerce-web-86gg.onrender.com/api/v1/product/product-category/${params.slug}`)
                 setProducts(data?.products)
                 setCategory(data?.category)
         }catch(error){

@@ -14,7 +14,7 @@ export default function ProductDetails() {
     // get product
     const getProuduct = async() => {
         try{
-            const {data} = await axios.get(`/api/v1/product/get-product/${params.slug}`)
+            const {data} = await axios.get(`https://ecommerce-web-86gg.onrender.com/api/v1/product/get-product/${params.slug}`)
             console.log(data);
             setProduct(data?.product)
         }catch(error){
