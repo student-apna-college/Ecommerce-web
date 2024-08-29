@@ -185,12 +185,6 @@ return (
                                     <button className="btn btn-danger" onClick={handleDelete}>DELETE PRODUCT</button>
 
                             </div>
-
-
-
-
-
-
                     </div>
                 </div>
             </div>

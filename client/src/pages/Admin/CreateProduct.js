@@ -136,12 +136,6 @@ const handleCreate = async (e) =>{
                                     <button className="btn btn-primary" onClick={handleCreate}>CREATE PRODUCT</button>
 
                             </div>
-
-
-
-
-
-
                     </div>
                 </div>
             </div>
