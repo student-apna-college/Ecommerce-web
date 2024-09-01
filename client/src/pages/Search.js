@@ -17,7 +17,7 @@ import { useSearch } from '../context/search'
           {value?.result.map((pr) =>(
                     
                     <div className="card m-2 " style={{width: '18rem'}} >
-                  <img src={`/api/v1/product/product-photo/${pr._id}`} className="card-img-top" alt={pr.name} />
+                  <img src={`https://ecommerce-web-86gg.onrender.com/api/v1/product/product-photo/${pr._id}`} className="card-img-top" alt={pr.name} />
                   <div className="card-body">
                   <h5 className="card-title">{pr.name}</h5>
                   <h5 className="card-title">${pr.price}</h5>

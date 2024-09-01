@@ -27,7 +27,7 @@ export default function ProductDetails() {
         
         <div className='row container mt-4'>
             <div className='col-md-6'>
-            <img src={`/api/v1/product/product-photo/${product._id}`} className="card-img-top" alt={product.name} />
+            <img src={`https://ecommerce-web-86gg.onrender.com/api/v1/product/product-photo/${product._id}`} className="card-img-top" alt={product.name} />
             </div>
             <div className='col-md-6 '>
                 <h1 className='text-center'>Product Details</h1>

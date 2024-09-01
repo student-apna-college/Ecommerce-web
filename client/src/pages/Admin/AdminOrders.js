@@ -83,7 +83,7 @@ export default function AdminOrders() {
                                         o?.products?.map((pr,i) => (
                                          <div className='row m-2 card flex-row'>
                                         <div className='col-md-4'>
-                                        <img src={`/api/v1/product/product-photo/${pr._id}`} className="card-img-top" alt={pr.name}  />
+                                        <img src={`https://ecommerce-web-86gg.onrender.com/api/v1/product/product-photo/${pr._id}`} className="card-img-top" alt={pr.name}  />
                                         </div>
                                     <div className='col-md-8'>
                                         <p>{pr.name}</p>

@@ -145,7 +145,7 @@ return (
                                     </div>
                                 ):(
                                     <div className='text-center'>
-                                        <img src={`/api/v1/product/product-photo/${id}`}
+                                        <img src={`https://ecommerce-web-86gg.onrender.com/api/v1/product/product-photo/${id}`}
                                          alt="Product photo" height={"200px"} 
                                          className='img img-responsive'></img>
 
